@@ -2,12 +2,9 @@ import 'package:chatapp/utils/error.dart';
 import 'package:chatapp/utils/loading.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
-
 import 'package:get/get.dart';
-
 import 'app/routes/app_pages.dart';
 import 'firebase_options.dart';
-import 'utils/splash.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -28,7 +25,7 @@ void main() async {
           return GetMaterialApp(
             debugShowCheckedModeBanner: false,
             title: "ChatApp",
-            initialRoute: Routes.UPDATE_STATUS,
+            initialRoute: Routes.CHAT_ROOM,
             getPages: AppPages.routes,
           );
           // return FutureBuilder(

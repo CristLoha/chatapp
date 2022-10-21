@@ -13,6 +13,7 @@ dependencies:
   firebase_auth: 4.0.2
   lottie: 1.4.3
   social_login_buttons: 1.0.6+2
+  avatar_glow: 2.0.2
   flutter: 
     sdk: flutter
 
