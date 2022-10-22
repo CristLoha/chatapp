@@ -1,12 +1,12 @@
+import 'package:chatapp/app/controllers/auth.dart';
 import 'package:flutter/material.dart';
-
 import 'package:get/get.dart';
 import 'package:lottie/lottie.dart';
 import 'package:social_login_buttons/social_login_buttons.dart';
-
 import '../controllers/login_controller.dart';
 
 class LoginView extends GetView<LoginController> {
+  final authC = Get.put(AuthController());
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -27,7 +27,7 @@ class LoginView extends GetView<LoginController> {
                   borderRadius: 50,
                   height: 60,
                   buttonType: SocialLoginButtonType.google,
-                  onPressed: () {},
+                  onPressed: () => authC.login(),
                 ),
                 SizedBox(height: 50),
                 Text('Chat App'),

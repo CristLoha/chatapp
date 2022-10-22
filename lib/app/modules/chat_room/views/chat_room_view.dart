@@ -19,7 +19,14 @@ class ChatRoomView extends GetView<ChatRoomController> {
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     SizedBox(width: 5),
-                    Icon(Icons.arrow_back),
+                    InkWell(
+                      onTap: () => Get.back(),
+                      child: Padding(
+                        padding: const EdgeInsets.all(5),
+                        child: Icon(Icons.arrow_back),
+                      ),
+                      borderRadius: BorderRadius.circular(100),
+                    ),
                     SizedBox(width: 5),
                     CircleAvatar(
                       radius: 25,
